@@ -1,1 +1,653 @@
+/* ==UserStyle==
+@name         Modern STINE Theme
+@namespace    USO Archive
+@author       to-typ
+@description  STINE is the online platform used by students of the University of Hamburg. The design looks outdated and can be improved upon. This userstyle provides a design more aligned with the design of the other University of Hamburg pages. This allows for a more colorful design instead of the varying greytones used in STINE otherwise.
+@version      20200726.12.35
+@license      CC-BY-4.0
+@preprocessor uso
+==/UserStyle== */
+@-moz-document url-prefix("https://www.stine.uni-hamburg.de") {
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
+    * {
+        font-family: 'Source Sans 3', sans-serif !important;
+    }
+
+    /* Top Bar */
+    #pageHeadBottom_1 {
+        display: none;
+        background-color: #0271bb;
+    }
+
+    #pageHeadBottom_2 {
+        display: none;
+    }
+
+    #pageHeadBottom_3 {
+        position: relative !important;
+        top: -40.5px !important;
+        background-color: #0271bb00 !important;
+        border: 0px;
+        width: 150px;
+        margin-left: auto;
+        margin-right: 13px;
+    }
+
+    #pageTopNavi ul.nav {
+        background-color: #0271bb;
+    }
+
+    #pageContainer {
+        background-image: url(none);
+        background-repeat: repeat-y;
+        min-width: 1400px;
+    }
+
+    a.depth_1:hover {
+        background-color: #fff !important;
+        color: #0271bb !important;
+    }
+
+    a.depth_1 {
+        background-color: #0271bb !important;
+        padding: 1em !important;
+        font-size: 1.3em;
+        text-transform: uppercase;
+        color: #fff !important;
+        box-sizing: border-box;
+        /*transform: scaleY(0.9) scale(1.1111);*/
+    }
+
+    li.depth_1 {
+        margin: 0 !important;
+    }
+
+    #extraNav_link4 {
+        display: none;
+    }
+
+    #extraNav_link5 {
+        display: none;
+    }
+
+    .img.img_LangEnglish {
+        color: #fff  !important;
+        margin-top: 0px !important;
+        margin-right: 17px !important;
+        padding: 0px 5px 0px 10px !important;
+    }
+
+    .img.img_LangEnglish:hover,.img.img_LangEnglish:visited,.img.img_LangGerman:hover, .img.img_LangGerman:visited {
+        color: #fff;
+    }
+
+    .img.img_LangGerman {
+        background-image: none;
+        color: #fff !important;
+        margin-top: 0px !important;
+        margin-right: 17px !important;
+        padding: 0px 5px 0px 10px !important;
+    }
+
+    #pageTopNavi {
+        width: auto !important;
+        position: static;
+    }
+
+    #pageTopNavi ul.nav li.tree ul.nav li a {
+        letter-spacing: 0px;
+        pointer-events: auto;
+    }
+
+    .navLink {
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    ul.depth_2 {
+        margin-top: 121px !important;
+    }
+
+    #logoutButton {
+        display: flex !important;
+        height: 21px !important;
+    }
+
+    #logoutButton.img {
+        line-height: 24px !important;
+    }
+
+    #logoutButton,
+    #logIn_btn,
+    #forgotPassword_btn {
+        background-color: #0000 !important;
+        border: 0px !important;
+        color: #fff !important;
+        position: static !important;
+        line-height: 22px !important;
+        margin: 0 !important;
+    }
+
+    #logoutButton.img,
+    #forgotPassword_btn.img {
+        background-color: #0000 !important;
+        border: 0px solid !important;
+        color: #fff !important;
+    }
+
+    #logIn_btn.img,
+    #forgotPassword_btn.img {
+        background-color: #0000 !important;
+        border: 0px !important;
+        color: #000 !important;
+    }
+
+    #logIn_btn,
+    #forgotPassword_btn {
+        background-color: #0000 !important;
+        border: 0px !important;
+        color: #fff !important;
+        position: static !important;
+        line-height: 22px !important;
+        margin: 0 !important;
+        margin-top: 2px !important;
+    }
+
+    /* Side Bar */
+    #pageTopNavi ul.nav li.depth_2 a {
+        font-weight: bold !important;
+        background-image: none !important;
+        border: 0px !important;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 1.2em;
+    }
+
+    #pageTopNavi ul.nav li.depth_2 {
+        border: 0px !important;
+    }
+
+    #pageTopNavi ul.nav.depth_2 {
+        top: 66px !important;
+        border-right: 1px solid #e0e0e0 !important;
+        border-bottom: 1px solid #e0e0e0 !important;
+        border-top: 1px solid #e0e0e0 !important;
+        background-color: #f2f2f2;
+        -moz-border-radius: 0px;
+        -webkit-border-radius: 0px 0.5rem 0.5rem 0px;
+        border-radius: 0px 0.5rem 0.5rem 0px;
+    }
+
+    #pageTopNavi ul.nav li.depth_3 a {
+        font-weight: normal !important;
+    }
+
+    #pageTopNavi ul.nav li.depth_3 {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        border: 0px !important;
+    }
+
+    #pageTopNavi ul.nav li.depth_2:hover {
+        background-color: #e2e2e2;
+    }
+
+    #pageTopNavi ul.nav.depth_2 li.depth_2 a.depth_2:hover {
+        background-color: #808080 !important;
+    }
+
+    #pageTopNavi ul.nav li.depth_3:hover {
+        padding-left: 3px !important;
+        border-left: 5px solid #0271bb !important;
+        background-color: #fff;
+    }
+
+    #pageTopNavi ul.nav li.depth_3 a {
+        font-size: 1em;
+        padding: 4px 4px 4px 17px;
+    }
+
+    #pageTopNavi ul.nav.depth_2 li.depth_2 * a:hover {
+        color: #000 !important;
+    }
+
+    #pageLeftTop,
+    #pageLeft {
+        min-height: 0px;
+        height: 1px;
+    }
+
+    /* Content */
+    #pageContentContainer {
+        top: -28px;
+        position: relative;
+    }
+
+    #pageContent {
+        margin-top: 2rem;
+        margin-left: 2rem;
+        min-height: 800px;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.5rem;
+        padding: 2rem;
+    }
+
+    #pageContentTop {
+        display: none;
+    }
+
+    a[name="seitenanfang"] {
+        display: flex;
+        height: 0px;
+        position: absolute;
+    }
+
+    div[style="border: 1px solid #D4D0C8; background-color:#F0F0F0; padding:5px 10px 5px 5px; float:right; margin-left:20px; margin-bottom:10px"],
+    div[style="border: 1px solid #D4D0C8; background-color:#F0F0F0; padding:5px 10px 5px 5px; float:left; margin-left:0px; margin-bottom:30px"],
+    div[style="border: 1px solid #D4D0C8;  background-color:#F0F0F0; padding:5px 10px 5px 5px; float:left; margin-left:0px; margin-bottom:30px"] {
+        padding: 1rem !important;
+        border-radius: 0.5rem;
+    }
+
+    b[style="color:#808080"] {
+        color: #000 !important;
+    }
+
+    ul[style="list-style-type:none"] {
+        margin: 2px 0px 0px 0px;
+        padding-left: 20px;
+    }
+
+    ul[style="list-style-type:none"] > b {
+        position: relative;
+        left: -10px;
+    }
+
+    h1 {
+        font-size: 2em !important;
+        color: #e2001a !important;
+        text-transform: uppercase;
+    }
+
+    /* Table */
+    .tb,
+    .tb750 {
+        border: 0 !important;
+    }
+
+    .tbcontrol,
+    .nb,
+    table.persaddrTbl tr.tbsubhead{
+        -moz-border-radius: 0px;
+        -webkit-border-radius: 0.5rem 0.5rem 0px 0px;
+        border-radius: 0.5rem 0.5rem 0px 0px;
+        border: 1px solid #bbb !important;
+        border-width: 1px 1px 0px 1px !important;
+    }
+
+    .tbhead,
+    caption {
+        padding: 1em 0 1em 0;
+        color: #000;
+        font-size: 16px;
+        background-color: #0000;
+    }
+
+    .tbsubhead th,
+    .tbsubhead {
+        background-color: #fff;
+        color: #000;
+        padding: 0.75em 0 0.75em 4px;
+    }
+
+    tr.subhead td,
+    .subhead td,
+    .tbsubhead,
+    .subhead {
+        background-color: #0000 !important;
+        color: #000 !important;
+        border: 0;
+    }
+
+    a {
+        color: #000;
+    }
+
+    tbody {
+        border-top: 1px solid !important;
+    }
+
+    th {
+        color: #383838;
+    }
+
+    .tb td {
+        border-top: none;
+    }
+
+    .tbdata,
+    .tbdata_nob {
+        border-top: 1px solid #808080 !important;
+    }
+
+    td.level01 {
+        background-color: #e2001a1f;
+        padding-left: 4px !important;
+    }
+
+    .tbcontrol .inputFieldLabel select {
+        margin-top: 0.8px !important;
+    }
+
+    .tbcontrol .inputFieldLabel input.img.img_arrowReload {
+        height: 19px;
+        line-height: 18.4px !important;
+        padding-left: 29px !important;
+    }
+
+    tr {
+        padding: 0.5em 0 0.5em 0 !important;
+    }
+
+    .tbtime11,
+    .tbtime01 {
+        background-color: transparent;
+        border-top: none;
+    }
+
+    .tbtime12,
+    .tbtime02 {
+        background-color: transparent;
+    }
+
+    .appointment {
+        background-image: none;
+        border: 1px solid #808080 !important;
+    }
+
+    div#weekTableRoomplan table.nb tr:nth-child(8n + 4),
+    div#weekTableRoomplan table.nb tr:nth-child(8n + 5),
+    div#weekTableRoomplan table.nb tr:nth-child(8n + 6),
+    div#weekTableRoomplan table.nb tr:nth-child(8n + 7),
+    div#scheduler table.nb tr:nth-child(8n + 1),
+    div#scheduler table.nb tr:nth-child(8n + 2),
+    div#scheduler table.nb tr:nth-child(8n + 3),
+    div#scheduler table.nb tr:nth-child(8n + 4) {
+        background-color: #ffffff;
+    }
+
+    div#weekTableRoomplan table.nb tr:nth-child(8n),
+    div#weekTableRoomplan table.nb tr:nth-child(8n + 1),
+    div#weekTableRoomplan table.nb tr:nth-child(8n + 2),
+    div#weekTableRoomplan table.nb tr:nth-child(8n + 3),
+    div#scheduler table.nb tr:nth-child(8n + 5),
+    div#scheduler table.nb tr:nth-child(8n + 6),
+    div#scheduler table.nb tr:nth-child(8n + 7),
+    div#scheduler table.nb tr:nth-child(8n + 8) {
+        background-color: #d0d0d0;
+    }
+
+    div#weekTableRoomplan table.nb tr:nth-child(4n),
+    div#scheduler table.nb tr:nth-child(4n + 1) {
+        border-top: 1px solid #808080;
+    }
+
+    div#weekTableRoomplan table.nb tr:nth-child(8n + 5),
+    div#weekTableRoomplan table.nb tr:nth-child(8n + 6),
+    div#weekTableRoomplan table.nb tr:nth-child(8n + 7),
+    div#scheduler table.nb tr:nth-child(8n + 2),
+    div#scheduler table.nb tr:nth-child(8n + 3),
+    div#scheduler table.nb tr:nth-child(8n + 4) {
+        border-top: 1px solid #d0d0d0;
+    }
+
+    div#weekTableRoomplan table.nb tr:nth-child(8n + 1),
+    div#weekTableRoomplan table.nb tr:nth-child(8n + 2),
+    div#weekTableRoomplan table.nb tr:nth-child(8n + 3),
+    div#scheduler table.nb tr:nth-child(8n + 6),
+    div#scheduler table.nb tr:nth-child(8n + 7),
+    div#scheduler table.nb tr:nth-child(8n + 8) {
+        border-top: 1px solid #bbb;
+    }
+
+    div#weekTableRoomplan table.nb tr:nth-child(3) {
+        border-top: 1px solid #808080 !important;
+        background-color: #f0f0f0;
+    }
+
+    /* Reload Arrows*/
+    input.img.img_arrowReload {
+        padding-left: 29px !important;
+    }
+
+    .tbcontrol .inputFieldLabel {
+        height: 22px !important;
+        position: relative;
+    }
+
+    .tbcontrol .inputFieldLabel::before,
+    label[for="course_catalogue"]::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        border-top: 5px solid #599a61;
+        border-left: 5px solid #fff;
+        border-right: 5px solid #fff;
+        border-bottom: 4px solid #fff;
+        left: 826px;
+        width: 0;
+        height: 0;
+        font-size: 0;
+        transform: rotate(55deg);
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .tbcontrol .inputFieldLabel::before {
+        display: flex;
+        border-top: 5px solid #599a61;
+        border-left: 5px solid #f0f0f0;
+        border-right: 5px solid #f0f0f0;
+        border-bottom: 4px solid #f0f0f0;
+        top: 4px;
+        left: 180px;
+    }
+
+    .tbcontrol .inputFieldLabel::after,
+    label[for="course_catalogue"]::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        border: 3px solid #599a61;
+        border-radius: 20px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        left: 830px;
+        width: 18px;
+        height: 18px;
+        font-size: 0;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .tbcontrol .inputFieldLabel::after {
+        display: flex;
+        top: 2.5px;
+        left: 184px;
+    }
+
+    /*Arrows*/
+    .img,
+    .arrow {
+        background-image: none !important;
+        display: flex;
+        line-height: 24px !important;
+        padding-left: 0em !important;
+    }
+
+    .img_arrowRight {
+        margin-top: 3px !important;
+        margin-right: 10px !important;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border: solid #e2001a 1px;
+        border-width: 0 5px 5px 0;
+        background-image: none !important;
+        -webkit-transform: rotate(-45deg);
+        height: 15px !important;
+        width: 15px !important;
+    }
+
+    .arrow::before,
+    .img.noFloat::before,
+    .img[name="schedulerLink"]::before,
+    a[class="img"]::before,
+    a[class="img workdays-week"]::before {
+        content: '';
+        display: inline-block;
+        margin-right: 7px !important;
+        margin-top: 6px !important;
+        box-sizing: border-box;
+        border: solid #e2001a 1px;
+        border-width: 0 5px 5px 0;
+        padding: 3px !important;
+        -webkit-transform: rotate(-45deg);
+        height: 10px !important;
+        width: 10px !important;
+    }
+
+    .img_arrowLeft:hover {
+        text-decoration: none;
+    }
+
+    .img_arrowLeft::before {
+        content: '';
+        background-image: none !important;
+        position: relative;
+        left: 3px;
+        margin-top: 3px !important;
+        margin-left: 3px !important;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border: solid #e2001a 1px;
+        border-width: 5px 0 0 5px;
+        -webkit-transform: rotate(-45deg);
+        height: 15px !important;
+        width: 15px !important;
+    }
+
+    .img_arrowLogout::before,
+    .img_LangEnglish::before,
+    .img_LangGerman::before,
+    .img_arrowRight::before {
+        content: '';
+        visibility: hidden !important;
+    }
+
+
+
+
+    /*Pictures*/
+    input[name="submit_search"] {
+        padding-left: 22px !important;
+        background-image: radial-gradient(circle at 16%, transparent, transparent 7%, #e2001a 7%, #e2001a 13%, transparent 13%),
+        linear-gradient(to bottom left, transparent 30%, #e2001a 30%, #e2001a 70%, transparent 70%) !important;
+        background-position: bottom 1px left 0px, bottom 4px left 11px;
+        background-repeat: no-repeat, no-repeat;
+        background-size: 100%, 10% 25%;
+    }
+
+    .img_LangEnglish::before {
+        position: absolute;
+        width: 48px;
+        height: 24px;
+        left: -5px;
+        top: 0px;
+        visibility: visible !important;
+        background-color: #00247D;
+        clip-path: circle(31.3% at 50% 50%);
+        background-image: linear-gradient(to bottom, transparent 40%, #CF142B 40%, #CF142B 60%, transparent 60%),
+        linear-gradient(to right, transparent 45%, #CF142B 45%, #CF142B 55%, transparent 55%),
+        linear-gradient(to bottom, transparent 33.3%, white 33.3%, white 66.6%, transparent 66.6%),
+        linear-gradient(to right, transparent 41.6%, white 41.6%, white 58.3%, transparent 58.3%),
+        linear-gradient(to bottom right, transparent 50%, #CF142B 50%, #CF142B 56.6%, transparent 56.6%),
+        linear-gradient(to bottom right, transparent 43.3%, #CF142B 43.3%, #CF142B 50%, transparent 50%),
+        linear-gradient(to bottom left, transparent 43.3%, #CF142B 43.3%, #CF142B 50%, transparent 50%),
+        linear-gradient(to bottom left, transparent 50%, #CF142B 50%, #CF142B 56.6%, transparent 56.6%),
+        linear-gradient(to bottom left, transparent 45%, white 45%, white 55%, transparent 55%),
+        linear-gradient(to bottom right, transparent 45%, white 45%, white 55%, transparent 55%);
+        background-position: left top, left top, left top, left top, left bottom, right top, right bottom, left top;
+        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+        background-size: 100%, 100%, 100%, 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+    }
+
+    .img_LangGerman::before {
+        position: absolute;
+        width: 48px;
+        height: 24px;
+        left: 5px;
+        top: 0px;
+        visibility: visible !important;
+        background-color: #000;
+        content: "";
+        overflow: hidden;
+        clip-path: circle(31.3% at 50% 50%);
+        background-image: linear-gradient(to bottom, transparent 33%, #FF0000 33%, #FF0000 66%, transparent 66%),
+        linear-gradient(to bottom, transparent 66%, #FFCC00 66%, #FFCC00 100%, transparent 100%);
+        background-position: left top, left top;
+        background-repeat: repeat-y, repeat-y;
+        background-size: 100% 100%;
+    }
+
+    /* Footer Bar */
+    #pageFootControlsRight {
+        display: none;
+    }
+
+    #pageFootControl_up {
+        display: none;
+    }
+
+    #pageFootControlsLeft {
+        margin-left: auto !important;
+        margin-right: 10px;
+        float: right;
+    }
+
+    #pageFoot {
+        background-color: #000;
+        border: 0px;
+        height: 22px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        position: fixed;
+    }
+
+
+    /* Log in */
+    #cn_loginForm {
+        position: absolute !important;
+        left: -685px !important;
+        top: -48px;
+        height: 11px !important;
+        text-align: right !important;
+    }
+
+    #login button {
+        background-color: #0000 !important;
+        border: 0px !important;
+        color: #000 !important;
+        position: static !important;
+        line-height: 22px !important;
+        margin: 0 !important;
+    }
+
+    #fieldSet_login .formRow .inputFieldLabel label {
+        color: #000;
+    }
+}
