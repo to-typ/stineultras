@@ -383,6 +383,15 @@
         background-image: none;
         border: 1px solid #808080 !important;
     }
+    
+     table.nb tr:last-child {
+        border-bottom: 1px solid #bbb !important;
+    }
+    
+    div#weekTableRoomplan table.nb tr:last-child,
+    div#scheduler table.nb tr:last-child {
+        border-bottom: 1px solid #808080 !important;
+    }
 
     div#weekTableRoomplan table.nb tr:nth-child(8n + 4),
     div#weekTableRoomplan table.nb tr:nth-child(8n + 5),
