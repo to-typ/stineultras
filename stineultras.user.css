@@ -3,7 +3,7 @@
 @namespace    userstyles.world
 @author       to-typ
 @description  Updated Theme for Stine, to be more in line with the other UHH-Platforms like Moodle and OpenOLAT. Based on the Theme from User "intres" (https://uso.kkx.one/style/174975).
-@version      20241119.12.43
+@version      20241119.18.32
 @license      CC-BY-4.0
 ==/UserStyle== */
 @-moz-document url-prefix("https://www.stine.uni-hamburg.de") {
@@ -69,6 +69,7 @@
         margin-top: 0px !important;
         margin-right: 17px !important;
         padding: 0px 5px 0px 10px !important;
+        position: relative !important;
     }
 
     .img.img_LangEnglish:hover,
@@ -596,7 +597,7 @@
         position: absolute;
         width: 48px;
         height: 24px;
-        left: -5px;
+        left: -30px;
         top: 0px;
         visibility: visible !important;
         background-color: #00247D;
@@ -620,7 +621,7 @@
         position: absolute;
         width: 48px;
         height: 24px;
-        left: 5px;
+        left: -30px;
         top: 0px;
         visibility: visible !important;
         background-color: #000;
