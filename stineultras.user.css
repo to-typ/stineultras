@@ -15,11 +15,7 @@
     }
 
     /* Top Bar */
-    #pageHeadBottom_1 {
-        display: none;
-        background-color: #0271bb;
-    }
-
+    #pageHeadBottom_1,
     #pageHeadBottom_2 {
         display: none;
     }
@@ -63,31 +59,24 @@
         margin: 0 !important;
     }
 
-    #extraNav_link4 {
+    #extraNav_link4,
+    #extraNav_link5{
         display: none;
     }
 
-    #extraNav_link5 {
-        display: none;
-    }
-
-    .img.img_LangEnglish {
+    .img.img_LangEnglish,
+    .img.img_LangGerman{
         color: #fff  !important;
         margin-top: 0px !important;
         margin-right: 17px !important;
         padding: 0px 5px 0px 10px !important;
     }
 
-    .img.img_LangEnglish:hover,.img.img_LangEnglish:visited,.img.img_LangGerman:hover, .img.img_LangGerman:visited {
+    .img.img_LangEnglish:hover,
+    .img.img_LangEnglish:visited,
+    .img.img_LangGerman:hover, 
+    .img.img_LangGerman:visited {
         color: #fff;
-    }
-
-    .img.img_LangGerman {
-        background-image: none;
-        color: #fff !important;
-        margin-top: 0px !important;
-        margin-right: 17px !important;
-        padding: 0px 5px 0px 10px !important;
     }
 
     #pageTopNavi {
@@ -103,10 +92,6 @@
     .navLink {
         font-weight: 600;
         letter-spacing: 0.5px;
-    }
-
-    ul.depth_2 {
-        margin-top: 121px !important;
     }
 
     #logoutButton {
@@ -169,7 +154,7 @@
     }
 
     #pageTopNavi ul.nav.depth_2 {
-        top: 66px !important;
+        top: 187px !important;
         border-right: 1px solid #e0e0e0 !important;
         border-bottom: 1px solid #e0e0e0 !important;
         border-top: 1px solid #e0e0e0 !important;
@@ -271,19 +256,53 @@
     }
 
     /* Table */
+    
     .tb,
     .tb750 {
         border: 0 !important;
     }
 
+    table.persaddrTbl {
+        border-collapse: separate;
+    }
+    
+    table.persaddrTbl tr.tbdata td{
+        border-top: 1px solid #808080;
+    }
+    
+    
     .tbcontrol,
-    .nb,
-    table.persaddrTbl tr.tbsubhead{
+    .nb {
         -moz-border-radius: 0px;
         -webkit-border-radius: 0.5rem 0.5rem 0px 0px;
         border-radius: 0.5rem 0.5rem 0px 0px;
         border: 1px solid #bbb !important;
         border-width: 1px 1px 0px 1px !important;
+    }
+    
+    table.persaddrTbl tr.tbsubhead td{
+        padding: 0px;
+    }
+    
+    table.persaddrTbl tr.tbsubhead td:first-child{
+        border-left: 1px solid #bbb !important;
+    }
+    
+    table.persaddrTbl tr.tbsubhead td:last-child{
+        border-right: 1px solid #bbb !important;
+    }
+    
+    table.persaddrTbl tr.tbsubhead:nth-child(10) td{
+        padding: 4px;
+        border-top: 1px solid #bbb !important;
+    }
+    
+    table.persaddrTbl tr.tbsubhead:nth-child(10) td:first-child{
+        border-top-left-radius: 0.5rem;
+    }
+    
+    table.persaddrTbl tr.tbsubhead:nth-child(10) td:last-child{
+        border-top-right-radius: 0.5rem;
     }
 
     .tbhead,
