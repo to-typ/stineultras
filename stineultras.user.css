@@ -279,6 +279,10 @@
         border-width: 1px 1px 0px 1px !important;
     }
     
+    table.persaddrTbl {
+        border-bottom: 1px solid #808080 !important;
+    }
+    
     table.persaddrTbl tr.tbsubhead td{
         padding: 0px;
     }
