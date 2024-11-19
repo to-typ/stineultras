@@ -3,7 +3,7 @@
 @namespace    userstyles.world
 @author       to-typ
 @description  Updated Theme for Stine, to be more in line with the other UHH-Platforms like Moodle and OpenOLAT. Based on the Theme from User "intres" (https://uso.kkx.one/style/174975).
-@version      0.1.1
+@version      0.1.2
 @license      CC-BY-4.0
 ==/UserStyle== */
 @-moz-document url-prefix("https://www.stine.uni-hamburg.de") {
@@ -125,7 +125,7 @@
     #forgotPassword_btn.img {
         background-color: #0000 !important;
         border: 0px !important;
-        color: #000 !important;
+        color: #fff !important;
     }
 
     #logIn_btn,
@@ -136,7 +136,6 @@
         position: static !important;
         line-height: 22px !important;
         margin: 0 !important;
-        margin-top: 2px !important;
     }
 
     /* Side Bar */
@@ -699,7 +698,7 @@
     /* Log in */
     #cn_loginForm {
         position: absolute !important;
-        left: -140px !important;
+        left: -130px !important;
         height: 11px !important;
         text-align: right !important;
     }
