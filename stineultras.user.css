@@ -283,11 +283,11 @@
         padding: 0px;
     }
     
-    table.persaddrTbl tr.tbsubhead td:first-child{
+    table.persaddrTbl tr td:first-child{
         border-left: 1px solid #bbb !important;
     }
     
-    table.persaddrTbl tr.tbsubhead td:last-child{
+    table.persaddrTbl tr td:last-child{
         border-right: 1px solid #bbb !important;
     }
     
