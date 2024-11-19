@@ -3,7 +3,7 @@
 @namespace    userstyles.world
 @author       to-typ
 @description  Updated Theme for Stine, to be more in line with the other UHH-Platforms like Moodle and OpenOLAT. Based on the Theme from User "intres" (https://uso.kkx.one/style/174975).
-@version      0.1.2
+@version      0.1.3
 @license      CC-BY-4.0
 ==/UserStyle== */
 @-moz-document url-prefix("https://www.stine.uni-hamburg.de") {
@@ -21,12 +21,14 @@
 
     #pageHeadBottom_3 {
         position: relative !important;
-        top: -37px !important;
+        top: -40px !important;
         background-color: #0271bb00 !important;
         border: 0px;
-        width: 150px;
-        margin-left: auto;
-        margin-right: 13px;
+        display: flex;
+        right: 8rem;
+        align-items: center;
+        justify-content: right;
+        translate: 80px;
     }
 
     #pageTopNavi ul.nav {
@@ -59,22 +61,22 @@
     }
 
     #extraNav_link4,
-    #extraNav_link5{
+    #extraNav_link5 {
         display: none;
     }
 
     .img.img_LangEnglish,
-    .img.img_LangGerman{
-        color: #fff  !important;
+    .img.img_LangGerman {
+        color: #fff !important;
         margin-top: 0px !important;
-        margin-right: 17px !important;
-        padding: 0px 5px 0px 10px !important;
+        padding: 0px 0px 0px 10px !important;
         position: relative !important;
+        margin-right: 1rem !important;
     }
 
     .img.img_LangEnglish:hover,
     .img.img_LangEnglish:visited,
-    .img.img_LangGerman:hover, 
+    .img.img_LangGerman:hover,
     .img.img_LangGerman:visited {
         color: #fff;
     }
@@ -112,6 +114,11 @@
         position: static !important;
         line-height: 22px !important;
         margin: 0 !important;
+        padding-right: 0;
+    }
+    
+    #logIn_btn {
+        margin-right: 1rem !important;
     }
 
     #logoutButton.img,
@@ -126,16 +133,6 @@
         background-color: #0000 !important;
         border: 0px !important;
         color: #fff !important;
-    }
-
-    #logIn_btn,
-    #forgotPassword_btn {
-        background-color: #0000 !important;
-        border: 0px !important;
-        color: #fff !important;
-        position: static !important;
-        line-height: 22px !important;
-        margin: 0 !important;
     }
 
     /* Side Bar */
@@ -255,7 +252,6 @@
     }
 
     /* Table */
-    
     .tb,
     .tb750 {
         border: 0 !important;
@@ -264,12 +260,12 @@
     table.persaddrTbl {
         border-collapse: separate;
     }
-    
-    table.persaddrTbl tr.tbdata td{
+
+    table.persaddrTbl tr.tbdata td {
         border-top: 1px solid #808080;
     }
-    
-    
+
+
     .tbcontrol,
     .nb {
         -moz-border-radius: 0px;
@@ -278,33 +274,33 @@
         border: 1px solid #bbb !important;
         border-width: 1px 1px 0px 1px !important;
     }
-    
+
     table.persaddrTbl {
         border-bottom: 1px solid #808080 !important;
     }
-    
-    table.persaddrTbl tr.tbsubhead td{
+
+    table.persaddrTbl tr.tbsubhead td {
         padding: 0px;
     }
-    
-    table.persaddrTbl tr td:first-child{
+
+    table.persaddrTbl tr td:first-child {
         border-left: 1px solid #bbb !important;
     }
-    
-    table.persaddrTbl tr td:last-child{
+
+    table.persaddrTbl tr td:last-child {
         border-right: 1px solid #bbb !important;
     }
-    
-    table.persaddrTbl tr.tbsubhead:nth-child(10) td{
+
+    table.persaddrTbl tr.tbsubhead:nth-child(10) td {
         padding: 4px;
         border-top: 1px solid #bbb !important;
     }
-    
-    table.persaddrTbl tr.tbsubhead:nth-child(10) td:first-child{
+
+    table.persaddrTbl tr.tbsubhead:nth-child(10) td:first-child {
         border-top-left-radius: 0.5rem;
     }
-    
-    table.persaddrTbl tr.tbsubhead:nth-child(10) td:last-child{
+
+    table.persaddrTbl tr.tbsubhead:nth-child(10) td:last-child {
         border-top-right-radius: 0.5rem;
     }
 
@@ -387,11 +383,11 @@
         background-image: none;
         border: 1px solid #808080 !important;
     }
-    
-     table.nb tr:last-child {
+
+    table.nb tr:last-child {
         border-bottom: 1px solid #bbb !important;
     }
-    
+
     div#weekTableRoomplan table.nb tr:last-child,
     div#scheduler table.nb tr:last-child {
         border-bottom: 1px solid #808080 !important;
@@ -617,7 +613,7 @@
         transform: rotate(45deg);
         pointer-events: none;
     }
-    
+
     input[name="submit_search"] {
         padding-left: 22px !important;
         background-image: radial-gradient(circle at 16%, transparent, transparent 7%, #e2001a 7%, #e2001a 13%, transparent 13%),
@@ -696,20 +692,22 @@
 
 
     /* Log in */
-    #cn_loginForm {
-        position: absolute !important;
-        left: -130px !important;
-        height: 11px !important;
-        text-align: right !important;
-    }
 
     #login button {
         background-color: #0000 !important;
         border: 0px !important;
         color: #fff !important;
         position: static !important;
-        line-height: 22px !important;
+        line-height: 24px !important;
         margin: 0 !important;
+    }
+    
+    #logIn_btn:hover {
+        text-decoration: underline !important;
+    }
+    
+    #forgotPassword_btn:hover {
+        text-decoration: underline !important;
     }
 
     #fieldSet_login .formRow .inputFieldLabel label {
