@@ -267,7 +267,6 @@
         border-top: 1px solid #808080;
     }
 
-
     .tbcontrol,
     .nb {
         -moz-border-radius: 0px;
@@ -275,6 +274,20 @@
         border-radius: 0.5rem 0.5rem 0px 0px;
         border: 1px solid #bbb !important;
         border-width: 1px 1px 0px 1px !important;
+    }
+    
+    .nb .tbMonthDay,
+    .nb .KW_month{
+        -webkit-border-radius: 0;
+        border-radius: 0;
+    }
+    
+    .nb .KW_month{
+        border-width: 0px 1px 0px 1px !important;
+    }
+    
+    .emptyDay {
+        border: none !important;
     }
 
     table.persaddrTbl {
