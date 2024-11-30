@@ -259,7 +259,8 @@
         border: 0 !important;
     }
 
-    table.persaddrTbl {
+    table.persaddrTbl,
+    .tb.rw-table.rw-all {
         border-collapse: separate;
     }
 
