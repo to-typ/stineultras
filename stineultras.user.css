@@ -3,7 +3,7 @@
 @namespace    userstyles.world
 @author       to-typ
 @description  Updated Theme for Stine, to be more in line with the other UHH-Platforms like Moodle and OpenOLAT. Based on the Theme from User "intres" (https://uso.kkx.one/style/174975).
-@version      0.1.4
+@version      0.1.5
 @license      CC-BY-4.0
 ==/UserStyle== */
 @-moz-document url-prefix("https://www.stine.uni-hamburg.de") {
@@ -469,8 +469,10 @@
         position: relative;
     }
 
+    
     .tbcontrol .inputFieldLabel::before,
-    label[for="course_catalogue"]::before {
+    label[for="course_catalogue"]::before,
+    .inputFieldLabel.long::before{
         content: "";
         display: inline-block;
         position: absolute;
@@ -496,9 +498,14 @@
         top: 4px;
         left: 180px;
     }
+    
+    .inputFieldLabel.long::before {
+        left: 581px;
+    }
 
     .tbcontrol .inputFieldLabel::after,
-    label[for="course_catalogue"]::after {
+    label[for="course_catalogue"]::after,
+    .inputFieldLabel.long::after{
         content: "";
         display: inline-block;
         position: absolute;
@@ -519,6 +526,10 @@
         display: flex;
         top: 2.5px;
         left: 184px;
+    }
+    
+    .inputFieldLabel.long::after {
+        left: 585px;
     }
 
     /*Arrows*/
