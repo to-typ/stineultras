@@ -228,10 +228,6 @@
         position: absolute;
     }
     
-    /*#contentSpacer_IE a {
-        display: flex !important;
-        margin-top: -16.8px;
-    }*/
     #contentSpacer_IE p {
         margin-bottom: 0px;
     }
@@ -268,6 +264,29 @@
         font-size: 2em !important;
         color: #f01c24 !important;
         text-transform: uppercase;
+    }
+    
+    .cn-warning {
+        background: rgb(248, 222, 165) !important;
+        border-radius: 0.5rem;
+    }
+    
+    div.iconWarning { 
+        background-image: none !important;
+        background-color: rgb(248, 222, 165);
+        border: 1px solid #f7a900;
+        border-radius: 20px;
+    }
+    
+    div.iconWarning::before{ 
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        width: 5px;
+        height: 17px;
+        background: linear-gradient(180deg, #f7a900 60%, transparent 60%, transparent 75%, #f7a900 75%);
     }
 
     /* Table */
