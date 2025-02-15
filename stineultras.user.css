@@ -1,9 +1,9 @@
 /* ==UserStyle==
-@name         STiNE Ultras STiNE Theme
+@name         Stine Ultras STINE Theme
 @namespace    userstyles.world
 @author       to-typ
 @description  Updated Theme for Stine, to be more in line with the other UHH-Platforms like Moodle and OpenOLAT. Based on the Theme from User "intres" (https://uso.kkx.one/style/174975).
-@version      0.1.5
+@version      0.1
 @license      CC-BY-4.0
 ==/UserStyle== */
 @-moz-document url-prefix("https://www.stine.uni-hamburg.de") {
@@ -21,16 +21,12 @@
 
     #pageHeadBottom_3 {
         position: relative !important;
-        top: -40px !important;
+        top: -37px !important;
         background-color: #0271bb00 !important;
         border: 0px;
-        display: flex;
-        right: 8rem;
-        align-items: center;
-        justify-content: right;
-        translate: 80px;
-        width: 300px;
-        float: right;
+        width: 150px;
+        margin-left: auto;
+        margin-right: 13px;
     }
 
     #pageTopNavi ul.nav {
@@ -71,9 +67,9 @@
     .img.img_LangGerman {
         color: #fff !important;
         margin-top: 0px !important;
-        padding: 0px 0px 0px 10px !important;
+        margin-right: 17px !important;
+        padding: 0px 5px 0px 10px !important;
         position: relative !important;
-        margin-right: 1rem !important;
     }
 
     .img.img_LangEnglish:hover,
@@ -116,11 +112,6 @@
         position: static !important;
         line-height: 22px !important;
         margin: 0 !important;
-        padding-right: 0;
-    }
-    
-    #logIn_btn {
-        margin-right: 1rem !important;
     }
 
     #logoutButton.img,
@@ -135,6 +126,17 @@
         background-color: #0000 !important;
         border: 0px !important;
         color: #fff !important;
+    }
+
+    #logIn_btn,
+    #forgotPassword_btn {
+        background-color: #0000 !important;
+        border: 0px !important;
+        color: #fff !important;
+        position: static !important;
+        line-height: 22px !important;
+        margin: 0 !important;
+        margin-top: 2px !important;
     }
 
     /* Side Bar */
@@ -225,6 +227,21 @@
         height: 0px;
         position: absolute;
     }
+    
+    /*#contentSpacer_IE a {
+        display: flex !important;
+        margin-top: -16.8px;
+    }*/
+    #contentSpacer_IE p {
+        margin-bottom: 0px;
+    }
+    
+    #contentSpacer_IE br,
+    a[href="#seitenanfang"] {
+        display: none;
+    }
+
+   
 
     div[style="border: 1px solid #D4D0C8; background-color:#F0F0F0; padding:5px 10px 5px 5px; float:right; margin-left:20px; margin-bottom:10px"],
     div[style="border: 1px solid #D4D0C8; background-color:#F0F0F0; padding:5px 10px 5px 5px; float:left; margin-left:0px; margin-bottom:30px"],
@@ -249,7 +266,7 @@
 
     h1 {
         font-size: 2em !important;
-        color: #e2001a !important;
+        color: #f01c24 !important;
         text-transform: uppercase;
     }
 
@@ -276,19 +293,27 @@
         border: 1px solid #bbb !important;
         border-width: 1px 1px 0px 1px !important;
     }
-    
+
     .nb .tbMonthDay,
-    .nb .KW_month{
+    .nb .KW_month {
         -webkit-border-radius: 0;
         border-radius: 0;
     }
-    
-    .nb .KW_month{
+
+    .nb .KW_month {
         border-width: 0px 1px 0px 1px !important;
     }
-    
+
     .emptyDay {
         border: none !important;
+    }
+
+    div.tbMonthDay div.tbsubhead {
+        background-color: #bbb !important;
+    }
+
+    div.tbMonthDay div.tbsubhead a {
+        padding-right: 5px;
     }
 
     table.persaddrTbl {
@@ -346,6 +371,10 @@
 
     a {
         color: #000;
+    }
+    
+    p a{
+        color: #0271bb;
     }
 
     tbody {
@@ -469,10 +498,9 @@
         position: relative;
     }
 
-    
     .tbcontrol .inputFieldLabel::before,
     label[for="course_catalogue"]::before,
-    .inputFieldLabel.long::before{
+    .inputFieldLabel.long::before {
         content: "";
         display: inline-block;
         position: absolute;
@@ -498,14 +526,14 @@
         top: 4px;
         left: 180px;
     }
-    
+
     .inputFieldLabel.long::before {
         left: 581px;
     }
 
     .tbcontrol .inputFieldLabel::after,
     label[for="course_catalogue"]::after,
-    .inputFieldLabel.long::after{
+    .inputFieldLabel.long::after {
         content: "";
         display: inline-block;
         position: absolute;
@@ -527,7 +555,7 @@
         top: 2.5px;
         left: 184px;
     }
-    
+
     .inputFieldLabel.long::after {
         left: 585px;
     }
@@ -610,6 +638,7 @@
         position: relative;
         padding-left: 25px !important;
     }
+
     .img_arrowEdit::before {
         content: "";
         display: inline-block;
@@ -719,22 +748,20 @@
 
 
     /* Log in */
+    #cn_loginForm {
+        position: absolute !important;
+        left: -130px !important;
+        height: 11px !important;
+        text-align: right !important;
+    }
 
     #login button {
         background-color: #0000 !important;
         border: 0px !important;
         color: #fff !important;
         position: static !important;
-        line-height: 24px !important;
+        line-height: 22px !important;
         margin: 0 !important;
-    }
-    
-    #logIn_btn:hover {
-        text-decoration: underline !important;
-    }
-    
-    #forgotPassword_btn:hover {
-        text-decoration: underline !important;
     }
 
     #fieldSet_login .formRow .inputFieldLabel label {
