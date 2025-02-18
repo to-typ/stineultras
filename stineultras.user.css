@@ -232,12 +232,10 @@
         margin-bottom: 0px;
     }
     
-    #contentSpacer_IE br,
+    #contentSpacer_IE > br,
     a[href="#seitenanfang"] {
         display: none;
     }
-
-   
 
     div[style="border: 1px solid #D4D0C8; background-color:#F0F0F0; padding:5px 10px 5px 5px; float:right; margin-left:20px; margin-bottom:10px"],
     div[style="border: 1px solid #D4D0C8; background-color:#F0F0F0; padding:5px 10px 5px 5px; float:left; margin-left:0px; margin-bottom:30px"],
@@ -266,6 +264,16 @@
         text-transform: uppercase;
     }
     
+    b {
+        font-weight: normal;
+    }
+    
+    ul.auditRegistrationList li ,
+    ul.auditRegistrationList li a {
+        font-weight: normal;
+        padding: 0;
+    }
+    
     .cn-warning {
         background: rgb(248, 222, 165) !important;
         border-radius: 0.5rem;
@@ -288,10 +296,19 @@
         height: 17px;
         background: linear-gradient(180deg, #f7a900 60%, transparent 60%, transparent 75%, #f7a900 75%);
     }
+    
+    div[style="border:1px solid lightgrey; padding:6px; margin-bottom:20px; min-height:103px"],
+    div[style="border:1px solid lightgrey; padding:6px; margin-bottom:20px; min-height:146px"], 
+    div[style="border:1px solid lightgrey; padding:6px; margin-bottom:20px; min-height:100px"],
+    div[style="border:1px solid lightgrey; padding:6px; margin-bottom:20px; min-height:69px"],
+    div[style="border:1px solid lightgrey; padding:10px 10px 10px 10px; margin-bottom:20px;"]
+    {
+        -webkit-border-radius: 0.5rem;
+        border-radius: 0.5rem;
+    }
 
     /* Table */
-    .tb,
-    .tb750 {
+    .tb{
         border: 0 !important;
     }
 
@@ -387,7 +404,76 @@
         color: #000 !important;
         border: 0;
     }
-
+    
+    .tbhead {
+        padding-left: 0.75em;
+    }
+    
+    tr:has(td.tbsubhead){
+        border-top: 1px solid #808080 ;
+        background-color:#f0f0f0 !important;
+    }
+    
+    .tbcoursestatus {
+        border-radius: 0.5em;
+        border-collapse: separate;
+    }
+    
+    .tbcoursestatus td.tbsubhead{
+        border-top: 1px solid #808080 ;
+    }
+    
+    .tb750 {
+        border-radius: 0.5em;
+        border-collapse: separate;
+    }
+    
+    .tb750 .tbhead td[colspan="6"]{
+        display: none;
+    }
+    
+    .tb750 .tbsubhead {
+        border-top: 1px solid #808080;
+        padding-top: 0;
+    }
+    
+    .tb750 .tbcontrol td[colspan="6"],
+    .tb750 .tbhead td[colspan="100%"]{
+        border-top: 0 !important;
+        border-radius: 0.5em 0.5em 0em 0em;
+    }
+   
+    /* Nachrichten Tabelle*/
+    table.tb:has(tr > td.tbcontrol[colspan="2"]),
+    table.tb:has(tr > td.tbcontrol[colspan="5"]){
+        border-collapse: separate;
+    }
+    
+    tr:has(td.tbcontrol[colspan="2"]),
+    tr:has(td.tbcontrol[colspan="5"]){
+        border-radius: 0.5em 0.5em 0em 0em;
+    }
+    
+    td.tbcontrol[colspan="2"] {
+        border-radius: 0.5em 0.5em 0em 0em;
+    }
+      
+    /* Veranstaltungsliste Tabelle */
+    .tbsubhead.rw-hide {
+        background-color: #f0f0f0 !important;
+        border: 1px solid #808080;
+        border-radius: 0.5em 0.5em 0em 0em;
+    }
+    
+    th[scope="col"]{
+        background-color: transparent !important;
+    }
+    
+    /* Meine Prüfungen Tabelle*/
+    .nb.list {
+        border-collapse: separate;
+    }
+    
     a {
         color: #000;
     }
@@ -403,10 +489,8 @@
     th {
         color: #383838;
     }
+    
 
-    .tb td {
-        border-top: none;
-    }
 
     .tbdata,
     .tbdata_nob {
@@ -519,7 +603,8 @@
 
     .tbcontrol .inputFieldLabel::before,
     label[for="course_catalogue"]::before,
-    .inputFieldLabel.long::before {
+    .inputFieldLabel.long::before,
+    .formRow .inputFieldLabel::before{
         content: "";
         display: inline-block;
         position: absolute;
@@ -536,7 +621,7 @@
         pointer-events: none;
     }
 
-    .tbcontrol .inputFieldLabel::before {
+    .tbcontrol .inputFieldLabel::before{
         display: flex;
         border-top: 5px solid #599a61;
         border-left: 5px solid #f0f0f0;
@@ -549,10 +634,15 @@
     .inputFieldLabel.long::before {
         left: 581px;
     }
+    
+    .formRow .inputFieldLabel::before {
+        left: 598px;
+    }
 
     .tbcontrol .inputFieldLabel::after,
     label[for="course_catalogue"]::after,
-    .inputFieldLabel.long::after {
+    .inputFieldLabel.long::after,
+    .formRow .inputFieldLabel::after {
         content: "";
         display: inline-block;
         position: absolute;
@@ -578,8 +668,16 @@
     .inputFieldLabel.long::after {
         left: 585px;
     }
+    
+    .formRow .inputFieldLabel::after {
+        left: 602px;
+    }
 
     /*Arrows*/
+    div:has(a.details){
+        overflow: visible !important;
+    }
+    
     .img,
     .arrow {
         background-image: none !important;
@@ -600,6 +698,44 @@
         -webkit-transform: rotate(-45deg);
         height: 15px !important;
         width: 15px !important;
+    }
+    
+    .details::before,
+    .register::before,
+    .img.download::before,
+    .form.img::before{
+        content: "";
+        margin-top: 4px !important;
+        margin-right: 10px !important;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border: solid #e2001a 1px;
+        border-width: 0 5px 5px 0;
+        background-image: none !important;
+        -webkit-transform: rotate(-45deg);
+        height: 15px !important;
+        width: 15px !important;
+    }
+    
+    .img_arrowLeftRed::before {
+        content: "";
+        margin-top: 9px;
+        margin-right: 5px;
+        -webkit-transform: rotate(-45deg);
+        height: 5px !important;
+        width: 20px !important;
+        background-color: #e2001a;
+    }
+    
+    .img_arrowLeftRed::after {
+        content: "";
+        position: absolute;
+        margin-top: 9px;
+        -webkit-transform: rotate(45deg);
+        height: 5px !important;
+        width: 20px !important;
+        background-color: #e2001a;
     }
 
     .arrow::before,
@@ -653,6 +789,17 @@
 
 
     /*Pictures*/
+    img[src="/img/individual/pass.gif"] {
+        /*opacity: 0;*/
+        border: 1px green;
+        background-color: green;
+        position: relative;
+        color: green;
+        background: none;
+        visibility: hidden;
+    }
+    
+    
     .img_arrowEdit {
         position: relative;
         padding-left: 25px !important;
