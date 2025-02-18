@@ -436,6 +436,9 @@
             border-top: none !important;
             border-radius: var(--corner-radius);
         }
+        th.time {
+            border-radius: 0;
+        }
         .tbcoursestatus td.tbsubhead {
             border-top: 1px solid var(--gray-dark);
         }
