@@ -38,6 +38,12 @@
         /* Graue fette Texte schwarz */
         b[style="color:#808080"] {
             color: black !important;
+            font-weight: normal;
+        }
+        ul.auditRegistrationList li,
+        ul.auditRegistrationList li a {
+            font-weight: normal;
+            padding: 0;
         }
 
         /* Ungeordnete Auflistungen */
@@ -223,6 +229,7 @@
             background-image: none !important;
             border: 0 !important;
             padding: 15px 0;
+            padding-left: 2rem;
             font-size: 1.2em;
         }
         #pageTopNavi ul.nav li.depth_2:hover {
@@ -301,7 +308,7 @@
         }
 
         /* Remove "Nach oben" hrefs und unnötige Breaks */
-        #contentSpacer_IE br,
+        #contentSpacer_IE > br,
         a[href="#seitenanfang"] {
             display: none;
         }
@@ -309,9 +316,18 @@
         /* Abrunden von verschiedensten Divs */
         div[style="border: 1px solid #D4D0C8; background-color:#F0F0F0; padding:5px 10px 5px 5px; float:right; margin-left:20px; margin-bottom:10px"],
         div[style="border: 1px solid #D4D0C8; background-color:#F0F0F0; padding:5px 10px 5px 5px; float:left; margin-left:0px; margin-bottom:30px"],
+        div[style="border: 1px solid #D4D0C8;  background-color:#F0F0F0; padding:5px 10px 5px 5px; float:left; margin-left:0px; margin-bottom:30px"],
+        div[style="border:1px solid lightgrey; padding:6px; margin-bottom:20px; min-height:103px"],
+        div[style="border:1px solid lightgrey; padding:6px; margin-bottom:20px; min-height:146px"],
+        div[style="border:1px solid lightgrey; padding:6px; margin-bottom:20px; min-height:100px"],
+        div[style="border:1px solid lightgrey; padding:6px; margin-bottom:20px; min-height:69px"],
+        div[style="border:1px solid lightgrey; padding:10px 10px 10px 10px; margin-bottom:20px;"] {
+            border-radius: var(--corner-radius);
+        }
+        div[style="border: 1px solid #D4D0C8; background-color:#F0F0F0; padding:5px 10px 5px 5px; float:right; margin-left:20px; margin-bottom:10px"],
+        div[style="border: 1px solid #D4D0C8; background-color:#F0F0F0; padding:5px 10px 5px 5px; float:left; margin-left:0px; margin-bottom:30px"],
         div[style="border: 1px solid #D4D0C8;  background-color:#F0F0F0; padding:5px 10px 5px 5px; float:left; margin-left:0px; margin-bottom:30px"] {
             padding: 1rem !important;
-            border-radius: var(--corner-radius);
         }
 
         /* Warnungs Div */
@@ -344,8 +360,7 @@
         /* Tabellen */
         /**/
         /* Keine Border */
-        .tb,
-        .tb750 {
+        .tb {
             border: 0 !important;
         }
 
@@ -358,14 +373,36 @@
             border: 1px solid var(--table-shaded) !important;
             border-width: 1px 1px 0px 1px !important;
         }
+        .tbcoursestatus,
+        .tb750 {
+            border-radius: var(--corner-radius);
+        }
 
         tr {
             padding: 0.5em 0 0.5em 0 !important;
         }
+        tr:has(td.tbsubhead) {
+            border-top: 1px solid var(--gray-dark);
+            background-color: var(--gray-light) !important;
+        }
+        .tb750 .tbsubhead {
+            border-top: 1px solid #808080;
+            padding-top: 0;
+        }
+        .tb750 .tbcontrol td[colspan="6"],
+        .tb750 .tbhead td[colspan="100%"] {
+            border-top: 0 !important;
+            border-radius: var(--corner-radius) var(--corner-radius) 0em 0em;
+        }
 
         /* Border Collapse Separate */
         table.persaddrTbl,
-        .tb.rw-table.rw-all {
+        .tb.rw-table.rw-all,
+        .tb750,
+        .tbcoursestatus,
+        table.tb:has(tr > td.tbcontrol[colspan="2"]),
+        table.tb:has(tr > td.tbcontrol[colspan="5"]),
+        .nb.list {
             border-collapse: separate;
         }
 
@@ -376,6 +413,9 @@
             color: black;
             font-size: 16px;
             background-color: transparent;
+        }
+        .tbhead {
+            padding-left: 0.75em;
         }
         .tbsubhead th,
         .tbsubhead {
@@ -393,14 +433,38 @@
         }
         th {
             color: #383838;
+            border-top: none !important;
+            border-radius: var(--corner-radius);
+        }
+        .tbcoursestatus td.tbsubhead {
+            border-top: 1px solid var(--gray-dark);
+        }
+
+        /* Remove unwanted, empty table headers */
+        .tb750 .tbhead td[colspan="6"] {
+            display: none;
         }
 
         /* Tabellen Body */
         tbody {
             border-top: 1px solid !important;
         }
-        .tb td {
-            border-top: none;
+
+        /* Nachrichten Tabelle*/
+        tr:has(td.tbcontrol[colspan="2"]),
+        tr:has(td.tbcontrol[colspan="5"]),
+        td.tbcontrol[colspan="2"],
+        .tbsubhead.rw-hide {
+            border-radius: var(--corner-radius) var(--corner-radius) 0em 0em;
+        }
+
+        /* Veranstaltungsliste Tabelle */
+        .tbsubhead.rw-hide {
+            background-color: var(--gray-light) !important;
+            border: 1px solid var(--gray-dark);
+        }
+        th[scope="col"] {
+            background-color: transparent !important;
         }
 
         /* Persönliche Daten Tabellen */
@@ -643,7 +707,8 @@
         }
         .tbcontrol .inputFieldLabel::before,
         label[for="course_catalogue"]::before,
-        .inputFieldLabel.long::before {
+        .inputFieldLabel.long::before,
+        .formRow .inputFieldLabel::before {
             content: "";
             display: inline-block;
             position: absolute;
@@ -659,6 +724,9 @@
             z-index: 2;
             pointer-events: none;
         }
+        .formRow .inputFieldLabel::before {
+            left: 598px;
+        }
         .tbcontrol .inputFieldLabel::before {
             display: flex;
             border-top: 5px solid var(--green);
@@ -671,9 +739,13 @@
         .inputFieldLabel.long::before {
             left: 581px;
         }
+        .formRow .inputFieldLabel::after {
+            left: 602px;
+        }
         .tbcontrol .inputFieldLabel::after,
         label[for="course_catalogue"]::after,
-        .inputFieldLabel.long::after {
+        .inputFieldLabel.long::after,
+        .formRow .inputFieldLabel::after {
             content: "";
             display: inline-block;
             position: absolute;
@@ -698,6 +770,9 @@
             left: 585px;
         }
         /* Arrows */
+        div:has(a.details) {
+            overflow: visible !important;
+        }
         .img,
         .arrow {
             background-image: none !important;
@@ -760,6 +835,41 @@
         .img_arrowRight::before {
             content: "";
         }
+        .details::before,
+        .register::before,
+        .img.download::before,
+        .form.img::before {
+            content: "";
+            margin-top: 4px !important;
+            margin-right: 10px !important;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            border: solid var(--red) 1px;
+            border-width: 0 5px 5px 0;
+            background-image: none !important;
+            transform: rotate(-45deg);
+            height: 15px !important;
+            width: 15px !important;
+        }
+        .img_arrowLeftRed::before {
+            content: "";
+            margin-top: 9px;
+            margin-right: 5px;
+            transform: rotate(-45deg);
+            height: 5px !important;
+            width: 20px !important;
+            background-color: var(--red);
+        }
+        .img_arrowLeftRed::after {
+            content: "";
+            position: absolute;
+            margin-top: 9px;
+            transform: rotate(45deg);
+            height: 5px !important;
+            width: 20px !important;
+            background-color: var(--red);
+        }
         /* Edit */
         .img_arrowEdit {
             position: relative;
@@ -816,4 +926,15 @@
             background-repeat: no-repeat, no-repeat;
             background-size: 100%, 10% 25%;
         }
+        /* Bestanden */
+        /*
+        img[src="/img/individual/pass.gif"] {
+            border: 1px var(--green);
+            background-color: var(--green);
+            position: relative;
+            color: var(--green);
+            background: none;
+            visibility: hidden;
+        }
+           */
     }
