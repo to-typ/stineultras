@@ -359,11 +359,13 @@
 
         /* Tabellen */
         /**/
-        /* Keine Border */
-        .tb {
-            border: 0 !important;
+        div.tb,
+        table.tb:has(tr > td.tbcontrol[colspan="2"]) {
+            border: none !important;
         }
-
+        td.tbhead[colspan="2"] {
+            border-top: none;
+        }
         /* richtige Border */
         .tbcontrol,
         .nb {
@@ -374,7 +376,8 @@
             border-width: 1px 1px 0px 1px !important;
         }
         .tbcoursestatus,
-        .tb750 {
+        .tb750,
+        table.tb {
             border-radius: var(--corner-radius);
         }
 
@@ -402,7 +405,8 @@
         .tbcoursestatus,
         table.tb:has(tr > td.tbcontrol[colspan="2"]),
         table.tb:has(tr > td.tbcontrol[colspan="5"]),
-        .nb.list {
+        .nb.list,
+        table.tb {
             border-collapse: separate;
         }
 
@@ -417,11 +421,18 @@
         .tbhead {
             padding-left: 0.75em;
         }
+        div.tbhead {
+            padding-left: 0;
+        }
         .tbsubhead th,
         .tbsubhead {
             background-color: white;
             color: black;
             padding: 0.75em 0 0.75em 4px;
+            border-radius: var(--corner-radius) var(--corner-radius) 0em 0em;
+        }
+        div.tbsubhead {
+            border: none;
         }
         tr.subhead td,
         .subhead td,
@@ -434,13 +445,16 @@
         th {
             color: #383838;
             border-top: none !important;
-            border-radius: var(--corner-radius);
         }
         th.time {
             border-radius: 0;
         }
         .tbcoursestatus td.tbsubhead {
             border-top: 1px solid var(--gray-dark);
+        }
+        td[colspan="5"] {
+            border-top: none;
+            border-radius: var(--corner-radius) var(--corner-radius) 0em 0em;
         }
 
         /* Remove unwanted, empty table headers */
@@ -460,14 +474,27 @@
         .tbsubhead.rw-hide {
             border-radius: var(--corner-radius) var(--corner-radius) 0em 0em;
         }
+        
+        /* Student Results Table */
+        div.tb table.nb.list.students_results:last-child {
+            border-collapse: collapse;
+            border-top: none !important;
+        }
+        table.nb.list.students_results > tbody {
+            border-top: none !important;
+        }
+        table.nb.list.students_results > tbody > tr > th:last-child {
+            padding-right: 4px;
+        }
 
         /* Veranstaltungsliste Tabelle */
         .tbsubhead.rw-hide {
             background-color: var(--gray-light) !important;
             border: 1px solid var(--gray-dark);
         }
-        th[scope="col"] {
+        .rw-hide > th[scope="col"] {
             background-color: transparent !important;
+            border-radius: 0;
         }
 
         /* Persönliche Daten Tabellen */
@@ -499,7 +526,8 @@
 
         /* Daten Tabellen */
         .tbdata,
-        .tbdata_nob {
+        .tbdata_nob,
+        table.nb.list > tbody > tr:last-child > th{
             border-top: 1px solid var(--gray-dark) !important;
         }
         .tbcontrol .inputFieldLabel select {
@@ -515,6 +543,33 @@
         td.level01 {
             background-color: #e2001a1f;
             padding-left: 4px !important;
+        }
+        
+        /* Dokumente Tabelle */
+        form[name="form1"] > div > table.tb .tbhead {
+            border-top: none;
+        }
+        
+        /* Supportanfrage Tabelle */
+        form[name="supportrequest"] > table.tb .tbhead {
+            border-top: none;
+        }
+        form[name="supportrequest"] > table.tb .tbcontrol {
+            border-radius: 0;
+            border-left: none !important;
+            border-right: none !important;
+        }
+        
+        /* Teilleistungen Tabelle */
+        table.nb.list > thead > tr:not(.tbcontrol) > td {
+            border-top: none !important;
+            border-radius: 0;
+        }
+        table.nb.list > thead > tr:not(.tbcontrol) > td:first-child {
+            border-radius: var(--corner-radius) 0 0em 0em;
+        }
+        table.nb.list > thead > tr:not(.tbcontrol) > td:last-child {
+            border-radius: 0 var(--corner-radius) 0em 0em;
         }
 
         /* Termine Tabelle */
@@ -727,9 +782,6 @@
             z-index: 2;
             pointer-events: none;
         }
-        .formRow .inputFieldLabel::before {
-            left: 598px;
-        }
         .tbcontrol .inputFieldLabel::before {
             display: flex;
             border-top: 5px solid var(--green);
@@ -738,12 +790,6 @@
             border-bottom: 4px solid var(--gray-light);
             top: 4px;
             left: 180px;
-        }
-        .inputFieldLabel.long::before {
-            left: 581px;
-        }
-        .formRow .inputFieldLabel::after {
-            left: 602px;
         }
         .tbcontrol .inputFieldLabel::after,
         label[for="course_catalogue"]::after,
@@ -768,9 +814,18 @@
             display: flex;
             top: 2.5px;
             left: 184px;
+        }  
+        .formRow .inputFieldLabel::before {
+            left: 598px;
+        }
+        .formRow .inputFieldLabel::after {
+            left: 602px;
         }
         .inputFieldLabel.long::after {
             left: 585px;
+        }
+        .inputFieldLabel.long::before {
+            left: 581px;
         }
         /* Arrows */
         div:has(a.details) {
