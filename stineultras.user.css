@@ -1,9 +1,10 @@
     /* ==UserStyle==
-@name           www.stine.uni-hamburg.de/scripts/mgrqispi.dll
-@namespace      github.com/openstyles/stylus
-@version        1.0.0
-@description    A new userstyle
-@author         Me
+@name         Stine Ultras STINE Theme
+@namespace    userstyles.world
+@author       to-typ
+@description  Updated Theme for Stine, to be more in line with the other UHH-Platforms like Moodle and OpenOLAT. Based on the Theme from User "intres" ( https://uso.kkx.one/style/174975 ).
+@version      0.2
+@license      CC-BY-4.0
 ==/UserStyle== */
     @-moz-document url-prefix("https://www.stine.uni-hamburg.de/") {
         @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
