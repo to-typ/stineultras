@@ -3,11 +3,10 @@
 @namespace    userstyles.world
 @author       to-typ
 @description  Updated Theme for Stine, to be more in line with the other UHH-Platforms like Moodle and OpenOLAT. Based on the Theme from User "intres" ( https://uso.kkx.one/style/174975 ).
-@version      0.5.1
+@version      0.5.2
 @license      CC-BY-4.0
 ==/UserStyle== */
-@-moz-document url-prefix("https://www.stine.uni-hamburg.de/") 
-{
+@-moz-document url-prefix("https://www.stine.uni-hamburg.de/") {
     @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 
     /* Allgemeine Änderungen */
@@ -28,6 +27,7 @@
         --border-gray: #e0e0e0;
         --corner-radius: 0.5rem;
     }
+
     * {
         font-family: "Source Sans 3", sans-serif !important;
     }
@@ -1249,7 +1249,10 @@
     .img.noFloat::before,
     .img[name="schedulerLink"]::before,
     a[class="img"]::before,
-    a[class="img workdays-week"]::before {
+    a[class="img workdays-week"]::before,
+    td:has(input#jSubmit)::after,
+    .tbcontrol:has(input[value="Anfrage senden"])::after,
+    td[colspan="2"]>button[name="btn_delete"]::before{
         content: "";
         display: inline-block;
         margin-right: 7px !important;
@@ -1262,7 +1265,20 @@
         height: 10px !important;
         width: 10px !important;
     }
-
+    
+    td:has(input#jSubmit)::after,
+    .tbcontrol:has(input[value="Anfrage senden"])::after{
+        float: right;
+        margin-right: -10px !important;
+        pointer-events: none;
+    }
+    
+    
+    #jSubmit,
+    input[value="Anfrage senden"]{
+        padding-left: 17px !important;
+    }
+    
     .img_arrowLeft:hover {
         text-decoration: none;
     }
