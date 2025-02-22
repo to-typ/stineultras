@@ -486,6 +486,9 @@
   table.tb {
     border-color: var(--table-shaded);
   }
+  div.tb {
+    border: none !important;
+  }
 
   tr {
     padding: 0.5em 0 0.5em 0 !important;
@@ -721,6 +724,7 @@
   }
   div.tb.rw-table {
     margin-bottom: 0;
+    border: none !important;
   }
   table.tb.rw-table.rw-all
     > thead
@@ -1279,13 +1283,13 @@
   }
   /* Bestanden */
   /*
-    img[src="/img/individual/pass.gif"] {
-        border: 1px var(--green);
-        background-color: var(--green);
-        position: relative;
-        color: var(--green);
-        background: none;
-        visibility: hidden;
-    }
-       */
+  img[src="/img/individual/pass.gif"] {
+      border: 1px var(--green);
+      background-color: var(--green);
+      position: relative;
+      color: var(--green);
+      background: none;
+      visibility: hidden;
+  }
+     */
 }
