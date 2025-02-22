@@ -3,7 +3,7 @@
 @namespace    userstyles.world
 @author       to-typ
 @description  Updated Theme for Stine, to be more in line with the other UHH-Platforms like Moodle and OpenOLAT. Based on the Theme from User "intres" ( https://uso.kkx.one/style/174975 ).
-@version      0.2.2
+@version      0.2.4
 @license      CC-BY-4.0
 ==/UserStyle== */
     @-moz-document url-prefix("https://www.stine.uni-hamburg.de/") {
@@ -664,7 +664,7 @@
             border: none !important;
         }
         
-        table:nth-child(6) > tbody > tr:nth-child(2) > td {
+        form[name="registrationdetailsform"] > table.tb750:nth-child(6) > tbody > tr:nth-child(2) > td {
             border-radius: var(--corner-radius);
             border-width: 1px !important;
         }
