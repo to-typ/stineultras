@@ -631,6 +631,18 @@
     border-top: 1px solid var(--table-shaded);
   }
   table.persaddrTbl {
+    border: none !important;
+    border-bottom: 1px solid var(--table-shaded) !important;
+    border-radius: var(--corner-radius) var(--corner-radius) 0 0;
+  }
+  table.persaddrTbl tbody {
+    border: none !important;
+  }
+  #contentSpacer_IE
+    table.persaddrTbl:last-child
+    > tbody
+    > tr.tbdata:nth-child(8)
+    > td {
     border-bottom: 1px solid var(--table-shaded) !important;
   }
   table.persaddrTbl tr.tbsubhead td {
