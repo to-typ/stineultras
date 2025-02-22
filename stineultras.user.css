@@ -3,7 +3,7 @@
 @namespace    userstyles.world
 @author       to-typ
 @description  Updated Theme for Stine, to be more in line with the other UHH-Platforms like Moodle and OpenOLAT. Based on the Theme from User "intres" ( https://uso.kkx.one/style/174975 ).
-@version      0.2
+@version      0.2.1
 @license      CC-BY-4.0
 ==/UserStyle== */
     @-moz-document url-prefix("https://www.stine.uni-hamburg.de/") {
@@ -17,6 +17,7 @@
             --blue-dark: #36acff;
             --blue-light: #bde1fb;
             --red: #f01c24;
+            --red-light: #ee9393;
             --green: #599a61;
             --yellow-dark: #f7a900;
             --yellow-light: #F8DEA5;
@@ -324,7 +325,8 @@
         div[style="border:1px solid lightgrey; padding:6px; margin-bottom:20px; min-height:146px"],
         div[style="border:1px solid lightgrey; padding:6px; margin-bottom:20px; min-height:100px"],
         div[style="border:1px solid lightgrey; padding:6px; margin-bottom:20px; min-height:69px"],
-        div[style="border:1px solid lightgrey; padding:10px 10px 10px 10px; margin-bottom:20px;"] {
+        div[style="border:1px solid lightgrey; padding:10px 10px 10px 10px; margin-bottom:20px;"],
+        div[style="border:1px solid lightgrey; padding-left:15px; margin-bottom:20px;"]{
             border-radius: var(--corner-radius);
         }
         div[style="border: 1px solid #D4D0C8; background-color:#F0F0F0; padding:5px 10px 5px 5px; float:right; margin-left:20px; margin-bottom:10px"],
@@ -332,8 +334,19 @@
         div[style="border: 1px solid #D4D0C8;  background-color:#F0F0F0; padding:5px 10px 5px 5px; float:left; margin-left:0px; margin-bottom:30px"] {
             padding: 1rem !important;
         }
+        
+        div[style="border:1px solid lightgrey; padding-left:15px; margin-bottom:20px;"]{
+            padding-bottom: 15px;
+        }
+        
+        /*Im Studienangebot suchen Button */
+        .cn_button {
+            background:none;
+            background-color: var(--gray-light);
+            border-radius: var(--corner-radius);
+        }
 
-        /* Warnungs Div */
+        /* Warnungs Divs */
         .cn-warning {
             background: var(--yellow-light) !important;
             border-radius: var(--corner-radius);
@@ -387,6 +400,35 @@
             transparent 75%,
             var(--blue-dark) 75%);
         }
+        
+        .cn-error {
+            background: var(--red-light) !important;
+            border-radius: var(--corner-radius);
+        }
+        div.iconError {
+            left: -10px !important;
+            top: -10px !important;
+            height: 0 !important;
+            width: 0 !important;
+            background-image: none !important;
+            border-style: solid;
+            border-width: 0 15px 26px 15px;
+            border-color: transparent transparent var(--red) transparent;
+        }
+        div.iconError::before {
+            content: "";
+            position: absolute;
+            bottom: -23px;
+            left: 50%;
+            transform:  translateX(-50%);
+            width: 4px;
+            height: 15px;
+            background: linear-gradient( 180deg,
+            white 60%,
+            transparent 60%,
+            transparent 75%,
+            white 75%);
+        }
 
         /* Tabellen */
         /**/
@@ -419,6 +461,8 @@
             border-top: 1px solid var(--gray-dark);
             background-color: var(--gray-light) !important;
         }
+        
+        
         .tb750 .tbsubhead {
             border-top: 1px solid #808080;
             padding-top: 0;
@@ -606,6 +650,27 @@
         }
         table.nb.list > thead > tr:not(.tbcontrol) > td:last-child {
             border-radius: 0 var(--corner-radius) 0em 0em;
+        }
+        
+        /* Zu Modulanmelden Tabelle*/
+        table.tb750.rw-table.rw-all > tbody > tr:nth-child(1) > td,
+        table.tb750.rw-table.rw-all tr.rw-hide > td:nth-child(8),
+        table.tb750.rw-table.rw-all > tbody > tr:nth-child(6),
+        form[name="registrationdetailsform"] > table.tb750 tr:nth-child(6){
+            display:none;
+        }
+        
+        table.tb750.rw-table.rw-all > tbody > tr:nth-child(2) > td {
+            border: none !important;
+        }
+        
+        table:nth-child(6) > tbody > tr:nth-child(2) > td {
+            border-radius: var(--corner-radius);
+            border-width: 1px !important;
+        }
+        
+        form[name="registrationdetailsform"] > table.tb750 td.tbdata_nob{
+            border-radius: 0;
         }
 
         /* Termine Tabelle */
