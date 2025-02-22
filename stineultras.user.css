@@ -79,8 +79,15 @@
 
   /* Select elemente */
   select {
+    border-color: var(--table-shaded) !important;
+    border-radius: var(--corner-radius) !important;
+  }
+
+  /* Text Input */
+  input[type="text"] {
     border-color: var(--table-shaded);
     border-radius: var(--corner-radius);
+    padding: 2px 4px;
   }
 
   /* Navigation */
@@ -334,7 +341,8 @@
   div[style="border:1px solid lightgrey; padding:6px; margin-bottom:20px; min-height:69px"],
   div[style="border:1px solid lightgrey; padding:10px 10px 10px 10px; margin-bottom:20px;"],
   div[style="border:1px solid lightgrey; padding-left:15px; margin-bottom:20px;"],
-  div[style="border:1px solid lightgrey; padding:10px 10px 10px 10px"] {
+  div[style="border:1px solid lightgrey; padding:10px 10px 10px 10px"],
+  div[style="border:1px solid lightgrey; border-left:3px solid #ff0000; padding:6px; margin-bottom:20px;"] {
     border-radius: var(--corner-radius);
   }
   div[style="border: 1px solid #D4D0C8; background-color:#F0F0F0; padding:5px 10px 5px 5px; float:right; margin-left:20px; margin-bottom:10px"],
@@ -798,6 +806,32 @@
   div.tb.rw-table > .tbsubhead {
     border: 1px solid var(--table-shaded);
     border-radius: 0 0 var(--corner-radius) var(--corner-radius);
+  }
+
+  /* Im Vorlesungsverzeichnis suchen */
+  form#findcourse fieldset {
+    border: 1px solid var(--table-shaded) !important;
+    border-radius: 0 0 var(--corner-radius) var(--corner-radius);
+  }
+  div.inputFieldLabel:has(select#course_catalogue)::before,
+  div.inputFieldLabel:has(select#course_catalogue)::after,
+  div.inputFieldLabel:has(select#course_catalogue_section)::before,
+  div.inputFieldLabel:has(select#course_catalogue_section)::after,
+  div.inputFieldLabel:has(select#faculty)::before,
+  div.inputFieldLabel:has(select#faculty)::after,
+  div.inputFieldLabel:has(select#course_type)::before,
+  div.inputFieldLabel:has(select#course_type)::after,
+  div.inputFieldLabel:has(input#course_number)::before,
+  div.inputFieldLabel:has(input#course_number)::after,
+  div.inputFieldLabel:has(input#course_short_name)::before,
+  div.inputFieldLabel:has(input#course_short_name)::after,
+  div.inputFieldLabel:has(input#module_number)::before,
+  div.inputFieldLabel:has(input#module_number)::after,
+  div.inputFieldLabel:has(input#instructor_surname)::before,
+  div.inputFieldLabel:has(input#instructor_surname)::after,
+  div.inputFieldLabel:has(input#free_text)::before,
+  div.inputFieldLabel:has(input#free_text)::after {
+    content: none;
   }
 
   /* Terminexport */
