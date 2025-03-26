@@ -3,7 +3,7 @@
 @namespace    userstyles.world
 @author       to-typ
 @description  Updated Theme for Stine, to be more in line with the other UHH-Platforms like Moodle and OpenOLAT. Based on the Theme from User "intres" ( https://uso.kkx.one/style/174975 ).
-@version      0.5.2
+@version      0.5.3
 @license      CC-BY-4.0
 ==/UserStyle== */
 @-moz-document url-prefix("https://www.stine.uni-hamburg.de/") {
@@ -554,7 +554,8 @@
     table.tb:has(tr > td.tbcontrol[colspan="2"]),
     table.tb:has(tr > td.tbcontrol[colspan="5"]),
     .nb.list,
-    table.tb {
+    table.tb,
+    form#moduleform table.tb.rw-table {
         border-collapse: separate;
     }
 
@@ -906,7 +907,7 @@
     }
 
     /* Anmeldegruppe Praktika tabellen */
-    div#contentlayoutleft > .tb {
+    :not(form#moduleform) > div#contentlayoutleft > .tb {
         border: none !important;
     }
 
@@ -920,7 +921,42 @@
         border-width: 1px !important;
         border-radius: var(--corner-radius);
     }
-
+    
+    /* Modultabelle */
+    form#moduleform table.tb.rw-table > tbody > tr.tbsubhead.rw-hide > td,
+    form#moduleform table:nth-child(4) > tbody > tr > td {
+        border-radius: 0 !important;
+    }
+    form#moduleform table.tb.rw-table > tbody > tr.tbsubhead.rw-hide > td:first-child {
+        border-radius: var(--corner-radius) 0 0 0 !important;
+    }
+    form#moduleform table.tb.rw-table > tbody > tr.tbsubhead.rw-hide > td:last-child {
+        border-radius: 0 var(--corner-radius) 0 0 !important;
+    }
+    form#moduleform > div > table.tb:not(.rw-table) > tbody > tr.tbsubhead > td {
+        border-radius: var(--corner-radius) var(--corner-radius) 0 0 !important;
+    }
+    form#moduleform table:nth-child(4) > tbody > tr > td:last-child {
+        border-radius: 0 0 var(--corner-radius) 0 !important;
+    }
+    form#moduleform table:nth-child(4) > tbody > tr > td:first-child {
+        border-radius: 0 0 0 var(--corner-radius) !important;
+    }
+    form#moduleform td.tbborderleft {
+        border-left: none !important;
+    }
+    form#moduleform table.tb_contentright,
+    form#moduleform table.tb_contentright tbody, 
+    form#moduleform table.tb_contentright tr,
+    form#moduleform table.tb_contentright td {
+        border: none !important;
+    }
+    form#moduleform table.tb_contentright tbody {
+        border: 1px solid var(--table-shaded) !important;
+        border-radius: var(--corner-radius) !important;
+    }
+    
+    
     /* Termine Tabelle */
     .nb .tbMonthDay,
     .nb .KW_month {
